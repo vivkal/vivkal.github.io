@@ -13,19 +13,19 @@ import jump from 'jump.js'
  */
 
 
-document.getElementById('home-link').addEventListener('click', () => {
+document.getElementById('home-link').addEventListener('click', function() {
   jump('#home', {
     offset: -120
   })
 });
 
-document.getElementById('contact-link').addEventListener('click', () => {
+document.getElementById('contact-link').addEventListener('click', function() {
   jump('#contact', {
     offset: -100
   })
 });
 
-document.getElementById('about-link').addEventListener('click', () => {
+document.getElementById('about-link').addEventListener('click', function() {
   jump('#about', {
     offset: -100
   })

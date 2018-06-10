@@ -8,7 +8,7 @@ module.exports = Object.assign(webpackConfig, {
     devtool: 'cheap-module-source-map',
 
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'docs'),
         filename: '[name].[chunkhash].js'
     },
 
@@ -17,7 +17,7 @@ module.exports = Object.assign(webpackConfig, {
             names: ['vendor', 'manifest']
         }),
 
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['docs'])
     ])
 
 });
