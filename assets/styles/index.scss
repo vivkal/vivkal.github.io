@@ -1,0 +1,134 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html, body {
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+  overflow-x: hidden;
+  background-color: #FAFAFA;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.menu {
+  font-family: 'Raleway', sans-serif;
+  list-style: none;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.menu-item {
+  font-size: 18px;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: 8px 6px 6px 6px;
+  position: relative;
+  letter-spacing: 0.06em;
+  &:after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0;
+    height: 2px;
+    background: transparent;
+	  transition: width .2s ease, background-color .5s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background: #000000;
+  }
+}
+
+main {
+  padding: 0 2.5vw;
+  padding-top: 70px;
+  margin-bottom: 30px;
+}
+
+#home {
+  .container {
+    background-image: url('./../images/garib-nawaz.jpg');
+    background-size: cover;
+    margin-bottom: 30px;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+    margin-top: 3vw;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  span {
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid #000000;
+  }
+}
+
+.text-box {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-text {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 5em;
+  border: 1px solid #FFFFFF;
+  padding: 20px;
+}
+
+#about, #contact {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.0975);
+  padding: 50px 100px;
+  margin-bottom: 30px;
+}
